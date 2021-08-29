@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <title>Curso de Javascript</title>
+    <meta charset="utf-8"/>
+    <style>
+        label{
+            display: block;
+        }
+        input{
+            display: block;
+        }
+        input[type=submit], label{
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <form name ="curso1" id="curso1" action="#" method="post">
+        <label for="">Nome</label>
+        <input type="text" name="fNome" id="teste" value="Primeiro - 1">
+        <label for="">Senha</label>
+        <input type="password" name="fSenha" value="123">
+        <input type="submit" name="btEnviar" value="Enviar">
+    </form>
+    <hr>
+    <script>
+        //apontando para o formulario
+        //var fm = document.forms[0].id;
+        //var fm = document.forms.item(0).id;
+        //var fm = document.forms.namedItem("curso1").innerHTML;
+        var fm = document.forms[0];
+        var el = fm.elements;
+
+        el[0].style.backgroundColor = "#ddd";
+        el[0].value = "Curso Javascript";
+
+        //apontando para o elemento
+        //var fm = document.forms[0].elements[0].value;
+        //document.write(fm);
+    </script>
+</body>
+</html>

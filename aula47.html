@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <title>Curso de Javascript</title>
+    <meta charset="utf-8"/>
+    <style>
+
+    </style>
+    <script>
+
+    </script>
+        
+</head>
+<body>
+    <p id="txt">Curso de Javascript - curso de javascript</p>
+
+    <script>
+        var texto = document.getElementById('txt').innerHTML;
+        var txt2 = ' - CURSO DE JAVASCRIPT';
+        //search mostra a posicao inicial da palavra
+        //var res = texto.search(/curso/i);
+
+        //replace substitui a primeira sentenca encontrada
+        //var res = texto.replace(/curso/i, 'Gama');
+        
+        //charAt retorna o caracter da posicao informada
+        //var res = texto.charAt(2);
+        
+        //charCodeAt retorna o codigo do caracter informado
+        //var res = texto.charCodeAt(2);
+
+        var res = texto.concat(txt2);
+
+        //modificadores i busca sem case-sensitive, nao diferencia minuscula de maiuscula
+        //modificadores m pesquisa normal sem armazenar em array
+        //modificadores g diz ao metodo para encontrar todas as ocorrencias da palavra e não para na primeira encontrada, cada ocorrencia é armazenada em array
+
+        document.write(`${res}<br>`);
+
+        //fromCharCode retorna o caracter com o codigo informado
+        document.write(String.fromCharCode(114));
+    </script>
+</body>
+</html>

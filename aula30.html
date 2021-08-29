@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <title>Curso de Javascript</title>
+    <meta charset="utf-8"/>
+    <script>
+        
+        function soma(n1, n2){
+            /* var res = n1 + n2;
+            document.write(res); */
+            return n1 + n2;
+        }
+        
+        document.write(soma(5, 4) + "<br>");
+
+        var numeros = [30, 3, 5, 15, 25, 20];
+        function media(nums){
+            var tam = nums.length;
+            var soma = 0;
+            for (let i = 0; i < tam; i++) {
+                soma += nums[i];                
+            }
+            return Math.round(soma / tam);
+        }
+        document.write(media(numeros));
+    </script>
+</head>
+<body>
+
+</body>
+</html>

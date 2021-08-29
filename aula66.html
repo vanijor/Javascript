@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <title>Curso de Javascript</title>
+    <meta charset="utf-8"/>
+    <style>
+        #painel {
+            width: 400px;
+            height: 500px;
+            border: 1px solid #000;
+            border-radius: 10px;
+            padding: 10px;
+        }
+    </style>
+    <script>
+        var painel;
+        /* Objeto Screen */
+        function verifica() {
+            painel = document.getElementById('painel');   
+            painel.innerHTML += `Resolução: ${screen.width}px X Altura: ${screen.height}px<br><hr/>`
+            painel.innerHTML += `Resolução Disponível: ${screen.availWidth}px X Altura: ${screen.availHeight}px<br><hr/>`
+            painel.innerHTML += `Profundidade de cores (imagens): ${screen.colorDepth}bits<br><hr/>`
+            painel.innerHTML += `Resolução cor da tela (pixel): ${screen.pixelDepth}bits/pixel<br><hr/>`
+        }
+
+        window.addEventListener('load', verifica);
+        
+    </script>
+        
+</head>
+<body>
+    <div id="painel"></div>
+</body>
+</html>

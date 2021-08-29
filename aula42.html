@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <title>Curso de Javascript</title>
+    <meta charset="utf-8"/>
+    <style>
+        table{
+            border-collapse: collapse;
+        }
+        table,td,tr,th{
+            border: 1px solid #000;
+        }
+    </style>
+</head>
+<body>
+    <div id="titulo"></div>
+    <table id="tbNotas">
+        <tr>
+            <th>Alunos</th>
+            <th>Nota 1</th>
+            <th>Nota 2</th>
+            <th>Resultado</th>
+        </tr>
+        <tr>
+            <th>Al1</th>
+            <th>35</th>
+            <th>48</th>
+            <th id="n1"></th>
+        </tr>
+        <tr>
+            <th>Al2</th>
+            <th>20</th>
+            <th>15</th>
+            <th id="n2"></th>
+        </tr>
+        <tr>
+            <th>Al3</th>
+            <th>40</th>
+            <th>48</th>
+            <th id="n3"></th>
+        </tr>
+        <tr>
+            <th>Al4</th>
+            <th>10</th>
+            <th>50</th>
+            <th id="n4"></th>
+        </tr>
+    </table>
+
+    <script>
+        var tabela = document.getElementById('tbNotas');
+        var nota;
+
+        for (let i = 0; i < tabela.rows.length; i++) {
+            nota = parseFloat(tabela.rows[i].cells[1].innerHTML) + parseFloat(tabela.rows[i].cells[2].innerHTML);            
+            tabela.rows[i].cells[3].innerHTML = nota;
+        }
+
+        var n = [];
+        n[0] = document.getElementById('n1');
+        n[1] = document.getElementById('n2');
+        n[2] = document.getElementById('n3');
+        n[3] = document.getElementById('n4');
+
+        for (let i = 0; i < 4; i++) {
+            if (n[i].innerHTML < 70) {
+                n[i].style.color = '#f00';
+            } else {
+                n[i].style.color = '#00f';
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <title>Curso de Javascript</title>
+    <meta charset="utf-8"/>
+    <script>
+        var num;
+
+        try {
+            num = prompt("Digite um valor");
+            if(num > 10) {
+                throw new Error("Valor Inválido");
+            }
+            document.write("Valor: " + num);
+        } catch (e) {
+            document.write("ERRO! " + e.message);
+            console.log("Mensagem de Erro: " + e.message);            
+        }
+    </script>
+</head>
+<body>
+
+</body>
+</html>

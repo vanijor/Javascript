@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <title>Curso de Javascript</title>
+    <meta charset="utf-8"/>
+    <style>
+        #rel {
+            color: chartreuse;
+            font-size: 25px;
+            font-weight: bold;
+            text-align: center;
+            width: 130px;    
+            background-color: black;
+        }
+    </style>
+    <script>
+       function relogio() {
+            var data = new Date();
+            var hora = data.getHours();
+            var minuto = data.getMinutes();
+            var segundo = data.getSeconds();
+
+            if (hora < 10) {
+                hora = "0" + hora;
+            } else if(minuto < 10) {
+                minuto = "0" + minuto;
+            } else if(segundo < 10) {
+                segundo = "0" + segundo;
+            } 
+            var horas = hora + " : " + minuto + " : " + segundo; 
+            document.getElementById('rel').value = horas;
+        }
+        var tempo = setInterval(relogio, 5);
+
+    </script>
+</head>
+<body>
+    <input type="text" id="rel">
+</body>
+</html>

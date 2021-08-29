@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <title>Curso de Javascript</title>
+    <meta charset="utf-8"/>
+    <style>
+        #painel {
+            width: 400px;
+            height: 500px;
+            border: 1px solid #000;
+            border-radius: 10px;
+            padding: 10px;
+        }
+    </style>
+    <script>
+        var painel;
+
+        function localizar(pos) {
+            var coord = pos.coords;
+            painel.innerHTML += `Localização: Latitude:  ${coord.latitude} Longitude: ${coord.longitude}`;
+        }
+
+        function verifica() {
+            painel = document.getElementById('painel');
+            navigator.geolocation.getCurrentPosition(localizar)
+            painel.innerHTML = `Nome do Browser: ${navigator.appName}<br><hr/>
+                                Versão do Browser: ${navigator.appVersion}<br><hr/> 
+                                Cookies: ${navigator.cookieEnabled}<br><hr/> 
+                                Idioma: ${navigator.language}<br><hr/> 
+                                Online: ${navigator.onLine}<br><hr/> 
+                                SO: ${navigator.platform}<br><hr/>
+                                Engine: ${navigator.product}<br><hr/>
+                                Agente: ${navigator.userAgent}<br><hr/>`; 
+        }
+
+        window.addEventListener('load', verifica);
+        
+    </script>
+        
+</head>
+<body>
+    <div id="painel"></div>
+</body>
+</html>

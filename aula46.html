@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <title>Curso de Javascript</title>
+    <meta charset="utf-8"/>
+    <style>
+
+    </style>
+    <script>
+
+    </script>
+        
+</head>
+<body>
+    <p id="txt">Curso de Javascript - curso de javascript</p>
+
+    <script>
+        var texto = document.getElementById('txt').innerHTML;
+        var res = texto.match(/[s+]/ig);
+        //modificadores i busca sem case-sensitive, nao diferencia minuscula de maiuscula
+        //modificadores m pesquisa normal sem armazenar em array
+        //modificadores g diz ao metodo para encontrar todas as ocorrencias da palavra e não para na primeira encontrada, cada ocorrencia é armazenada em array
+
+        document.write(`${res} : ${res.length}`);
+    </script>
+</body>
+</html>

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <title>Curso de Javascript</title>
+    <meta charset="utf-8"/>
+    <script>
+
+        /* indexOf retorna a posição */
+
+        var mochila = [],pos;
+
+        mochila.push("faca");
+        mochila.push("corda");
+        mochila.push("pederneira");
+        mochila.push("chave");
+        mochila.push("lanterna");
+        mochila.push("pedra");
+
+        pos = mochila.indexOf("pedra");
+
+        if (pos < 0) {
+            document.write("Item não está na mochila<br>");
+        } else {
+            document.write("Item está na mochila - Posiçao: " + pos + "<br><br>");
+        }
+
+        /* sort organiza em ordem crescente */
+        /* reverse organiza em ordem decrescente */
+        
+        var numeros = [], posicao;
+        var numeros = [5, 8, 3, 4, 1, 0, 6, 2, 9, 7];
+
+        numeros.sort();
+        numeros.reverse();
+
+        document.write(numeros[0] + "<br>");
+        document.write(numeros[1] + "<br>");
+        document.write(numeros[3] + "<br>");
+        document.write(numeros[4] + "<br>");
+        document.write(numeros[5] + "<br>");
+        document.write(numeros[6] + "<br>");
+        document.write(numeros[7] + "<br>");
+        document.write(numeros[8] + "<br>");
+        document.write(numeros[9] + "<br><br>");
+        
+        var juntos = [];
+        
+        juntos = mochila.concat(numeros);
+        
+        document.write(juntos[0] + "<br>");
+        document.write(juntos[1] + "<br>");
+        document.write(juntos[3] + "<br>");
+        document.write(juntos[4] + "<br>");
+        document.write(juntos[5] + "<br>");
+        document.write(juntos[6] + "<br>");
+        document.write(juntos[7] + "<br>");
+        document.write(juntos[8] + "<br>");
+        document.write(juntos[9] + "<br>");
+        document.write(juntos[10] + "<br>");
+        document.write(juntos[11] + "<br>");
+        document.write(juntos[12] + "<br>");
+        document.write(juntos[13] + "<br>");
+        document.write(juntos[14] + "<br>");
+        document.write(juntos[15] + "<br><br>");
+        document.write("Tamanho da mochila: " + mochila.length + "<br>");
+        document.write("Tamanho da numeros: " + numeros.length + "<br>");
+        document.write("Tamanho da juntos: " + juntos.length + "<br>");
+        
+    </script>
+</head>
+<body>
+
+</body>
+</html>

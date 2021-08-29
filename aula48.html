@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <title>Curso de Javascript</title>
+    <meta charset="utf-8"/>
+    <style>
+
+    </style>
+    <script>
+
+    </script>
+        
+</head>
+<body>
+    <p id="txt">Curso de Javascript - curso de javascript - jorge</p>
+
+    <script>
+        var texto = document.getElementById('txt').innerHTML;        
+        var texto2 =  'texto';        
+
+        //var res = texto.indexOf('j'); //posição 31
+        //var res = texto.lastIndexOf('j'); //posição 44
+        //var res = texto.localeCompare(texto2); //compara as strings
+        //var res = texto.slice(0, 5); //recortaa a string posicao inicial e final
+        //var res = texto.split(" "); //picar a string onde indicar, vira um vetor
+        //var res = texto.substr(0, 15); //recorta a string posicao inicial e tamanho da string
+        //var res = texto.toLocaleLowerCase(); //converte a string para minusculo
+        var res = texto.toLocaleUpperCase(); //converte a string para maiusculo
+
+        document.write(`${res}`);            
+        
+        
+    </script>
+</body>
+</html>

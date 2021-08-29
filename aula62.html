@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <title>Curso de Javascript</title>
+    <meta charset="utf-8"/>
+    <style>
+        
+    </style>
+    <script>
+        var minhaJanela;
+
+        function abreJ(){
+            minhaJanela = window.open('aula50.html', '_blank', 'width=300 height=300 top=300 left=300');//open("pagina", "_blank")nova pagina, open("pagina", "_self")mesma pagina
+        }
+        function fechaJ(){
+            minhaJanela.close();
+        }
+    </script>
+        
+</head>
+<body>
+    <button onclick="abreJ()">Abrir Jogo</button>
+    <button onclick="fechaJ()">Fechar Jogo</button>
+</body>
+</html>
